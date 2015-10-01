@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<body ng-controller="signCtrl">
+<div class="wrapperSign">
+	<h1>Astrological Sign</h1>
+	<div class="calendarSign">
+		<input type="date" ng-model="yourBirthday">
+		<input type="submit" ng-click="getSign()">
+		<br>
+	</div>
+			<div class="menu">
+				<div ng-show="value">
+					<ul class="resultsSign">
+							<li><span>Sign:</span>&nbsp;{{yourSign.sign}} </li>
+							<li><span>Date Range:</span>&nbsp;{{yourSign.range}}</li>
+							<li><span>Element:</span>&nbsp;{{yourSign.element}}</li>
+							<li><span>Ruler:</span>&nbsp;{{yourSign.ruler}}</li>
+							<li><span>Greatest Overall Compatibility:</span>&nbsp;{{yourSign.compatibility}}</li>
+							<li><span>Best for Marriage:</span>&nbsp;{{yourSign.marriage}}</li>
+							<li><span>Strengths:</span>&nbsp;{{yourSign.strengths}}</li>
+							<li><span>Weaknesses:</span>&nbsp;{{yourSign.weaknesses}}</li>
+							<li><span>Personality Traits</span>&nbsp;{{yourSign.personality}}</li>
+							<li><img src="{{yourSign.image}}" style="height: 50px" "width: 50px"></li>
+							
+					</ul>
+				</div>	
+			</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<div class="wrapper">
+	<h1>Lunar Data</h1>
+		<div class="calendar">
+			<input type="date" ng-model="currentDate">
+			<input type="submit" ng-click="getPhase()">
+			<br>
+		</div>
+			<div class="menu">
+				<div ng-show="value">
+					<ul class="results">
+					<div>
+						<li><span>Moon Age:</span>&nbsp;{{moonInfo.age | number: 0}} days</li>
+						<li><span>Illumination:</span>&nbsp;{{moonInfo.illumination | number:0}} % </li>
+						<li><span>Stage:</span>&nbsp;{{moonInfo.stage}} gibbous</li>
+						<li><span>Distance from Center of the Earth:</span>&nbsp;{{moonInfo.DFCOE | number:0}} kilometers </li>
+						<li><span>Distance from the Sun:</span>&nbsp;{{moonInfo.DFS | number:0}} kilometers </li>
+						<li><span>Recent Full Moon :</span>&nbsp;{{moonInfo.FM.DT}}</li>
+						<li><span>Next New Moon:</span>&nbsp;{{moonInfo.NNM.DT}}</li>
+						<li><img src="{{moonInfo.picture}}"></li>	
+					</div>
+					</ul>
+				</div>
+			</div>	
+</div>
